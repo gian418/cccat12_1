@@ -26,3 +26,12 @@ test("Se a distância for inválida deve lançar um erro", async function () {
 	const output = response.data;
 	expect(output).toBe("Invalid distance");
 });
+
+test("teste asd", async function () {
+	const input = {
+		name: "gian", email: "email@email.com", document: "999"
+	};
+	const response = await axios.post("http://localhost:3000/passengers", input);
+	const output = response.data;
+	expect(output.passenger_id).toBe("123123123");
+});

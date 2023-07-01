@@ -1,6 +1,5 @@
 // @ts-nocheck
 import express from "express";
-import { calculate } from "./RideCalculator";
 import Ride from "./Ride";
 const app = express();
 
@@ -17,6 +16,16 @@ app.post("/calculate_ride", function (req, res) {
 	} catch (e) {
 		res.status(422).send(e.message);
 	}
+});
+
+app.post("/passengers", function (req, res) {
+	const {name, email, document} = req.body;
+
+	console.log(name);
+	console.log(email);
+	console.log(document);
+
+	return res.json({ passenger_id: "123123123" });
 });
 
 app.listen(3000);
