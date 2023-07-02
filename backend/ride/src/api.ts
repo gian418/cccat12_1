@@ -1,4 +1,5 @@
 // @ts-nocheck
+import "reflect-metadata";
 import express from "express";
 import Ride from "./Ride";
 const app = express();
@@ -28,4 +29,4 @@ app.post("/passengers", function (req, res) {
 	return res.json({ passenger_id: "123123123" });
 });
 
-app.listen(3000);
+app.listen(3000, () => console.log("Servidor esta rodando..."));

@@ -4,3 +4,7 @@
 4 - npx ts-jest config:init
 5 - npx jest
 6 - npx nodemon src/main.ts
+
+- yarn add typeorm reflect-metadata pg
+- yarn typeorm migration:create src/database/migrations/CreatePassengers
+- yarn typeorm migration:run
