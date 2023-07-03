@@ -16,7 +16,7 @@ export class Driver {
     @Column()
     document: string;
 
-    @Column("car_plate")
+    @Column({name: "car_plate"})
     carPlate: string;
 
     constructor() {
