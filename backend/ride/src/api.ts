@@ -25,15 +25,5 @@ AppDataSource.initialize().then(() => {
 		}
 	});
 	
-	// app.post("/passengers", function (req, res) {
-	// 	const {name, email, document} = req.body;
-	
-	// 	console.log(name);
-	// 	console.log(email);
-	// 	console.log(document);
-	
-	// 	return res.json({ passenger_id: "123123123" });
-	// });
-	
 	return app.listen(process.env.PORT, () => console.log("Servidor esta rodando..."));
 });
